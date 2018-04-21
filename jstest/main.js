@@ -3,7 +3,7 @@
 });
 */
 
-var rocker = require('./rocker.js');
+// var rocker = require('./rocker.js');
 //rocker.name(); // 'My name is Lemmy Kilmister'
 //const rocker = require('./rocker.js')
 //rocker.name(); // 'My name is Lemmy Kilmister'
@@ -19,37 +19,52 @@ http.createServer(function (req, res) {
 
 function testjs()
 {
-	//alert("test!");
-	rocker.invoke()
+	alert("test!");
+	// rocker.invoke()
 }
 
-let promiseToCleanTheRoom = new Promise(function(resolve,reject){
-	
-	//cleaning the room
-	
-	let isClean = false;
-	
-	if(isClean){
-		resolve('Clean');
-	}else{
-		reject('not Clean');
-	}
-	
-});
+function testDotDotDot()
+{
+	const a = {
+        a: 1,
+        b: 2,
+        c: 3
+    };
+    const b = {
+    ...a,
+    d: [],
+    b: 5  //this will update the b value in a{}
+    }
+    console.log(b);
+}
 
-let myFirstPromise = new Promise(function(resolve, reject){
-    //当异步代码执行成功时，我们才会调用resolve(...), 当异步代码失败时就会调用reject(...)
-    //在本例中，我们使用setTimeout(...)来模拟异步代码，实际编码时可能是XHR请求或是HTML5的一些API方法.
-    setTimeout(function(){
-        resolve("success!"); //代码正常执行！
-    }, 250);
-});	
+// let promiseToCleanTheRoom = new Promise(function(resolve,reject){
+	
+// 	//cleaning the room
+	
+// 	let isClean = false;
+	
+// 	if(isClean){
+// 		resolve('Clean');
+// 	}else{
+// 		reject('not Clean');
+// 	}
+	
+// });
 
-myFirstPromise.then(function(successMessage){
-    //successMessage的值是上面调用resolve(...)方法传入的值.
-    //successMessage参数不一定非要是字符串类型，这里只是举个例子
-    console.log("Yay! " + successMessage);
-});
+// let myFirstPromise = new Promise(function(resolve, reject){
+//     //当异步代码执行成功时，我们才会调用resolve(...), 当异步代码失败时就会调用reject(...)
+//     //在本例中，我们使用setTimeout(...)来模拟异步代码，实际编码时可能是XHR请求或是HTML5的一些API方法.
+//     setTimeout(function(){
+//         resolve("success!"); //代码正常执行！
+//     }, 250);
+// });	
+
+// myFirstPromise.then(function(successMessage){
+//     //successMessage的值是上面调用resolve(...)方法传入的值.
+//     //successMessage参数不一定非要是字符串类型，这里只是举个例子
+//     console.log("Yay! " + successMessage);
+// });
 
 
 
