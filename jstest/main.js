@@ -20,7 +20,20 @@ http.createServer(function (req, res) {
 function testjs()
 {
 	alert("test!");
-	// rocker.invoke()
+    // rocker.invoke()
+    
+    var arr = new Array(6)
+    arr[0] = "George"
+    arr[1] = "John"
+    arr[2] = "Thomas"
+    arr[3] = "James"
+    arr[4] = "Adrew"
+    arr[5] = "Martin"
+
+    document.write(arr + "<br />")   //output George,John,Thomas,James,Adrew,Martin
+    document.write(arr.slice(2,4) + "<br />") //output arr[2],arr[3] Thomas,James
+    document.write(arr.slice(2) + "<br />")
+    document.write(arr.slice() + "<br />")
 }
 
 function testDotDotDot()
@@ -36,6 +49,7 @@ function testDotDotDot()
     b: 5  //this will update the b value in a{}
     }
     console.log(b);
+    //output:{a: 1, b: 5, c: 3, d: Array(0)}
 }
 
 // let promiseToCleanTheRoom = new Promise(function(resolve,reject){
